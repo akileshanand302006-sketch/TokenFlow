@@ -1,0 +1,228 @@
+/* ============================================================
+   TOKENFLOW PRO — ULTRA PREMIUM LIGHT LIQUID GLASS THEME
+   Translucent crystal glass with radiant liquid glow reflections
+   ============================================================ */
+
+[data-theme="light"] {
+    /* Base Backgrounds */
+    --bg-primary: #f1f5f9;
+    --bg-secondary: #e2e8f0;
+    --bg-tertiary: #cbd5e1;
+    --bg-elevated: rgba(255, 255, 255, 0.5);
+
+    /* Glass Surfaces — Crystal Translucent Liquid Glass */
+    --glass-surface: rgba(255, 255, 255, 0.35);
+    --glass-elevated: rgba(255, 255, 255, 0.45);
+    --glass-floating: rgba(255, 255, 255, 0.38);
+    --glass-command: rgba(255, 255, 255, 0.75);
+    --glass-highlight: rgba(2, 132, 199, 0.12);
+
+    /* Crystal Glow Borders */
+    --border-glass: rgba(255, 255, 255, 0.85);
+    --border-glass-hover: rgba(2, 132, 199, 0.5);
+    --border-active: rgba(2, 132, 199, 0.7);
+    --border-highlight: rgba(2, 132, 199, 0.3);
+    --border-subtle: rgba(255, 255, 255, 0.6);
+
+    /* Accents — Deep Crisp Colors */
+    --accent-primary: #0284c7;
+    --accent-primary-rgb: 2, 132, 199;
+    --accent-secondary: #7c3aed;
+    --accent-secondary-rgb: 124, 58, 237;
+    --accent-success: #059669;
+    --accent-success-rgb: 5, 150, 105;
+    --accent-warning: #d97706;
+    --accent-warning-rgb: 217, 119, 6;
+    --accent-danger: #dc2626;
+    --accent-danger-rgb: 220, 38, 38;
+    --accent-info: #0891b2;
+    --accent-info-rgb: 8, 145, 178;
+
+    /* Text — High Contrast Deep Slate & Black */
+    --text-primary: #0f172a;
+    --text-secondary: #1e293b;
+    --text-muted: #475569;
+    --text-inverse: #ffffff;
+
+    /* Shadows & Inner Reflections */
+    --shadow-xs: 0 1px 3px rgba(15, 23, 42, 0.04);
+    --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.06);
+    --shadow-md: 0 4px 16px rgba(15, 23, 42, 0.08);
+    --shadow-lg: 0 8px 32px rgba(15, 23, 42, 0.10);
+    --shadow-xl: 0 16px 48px rgba(15, 23, 42, 0.12);
+    --shadow-glass: 0 8px 32px rgba(31, 38, 135, 0.07), inset 0 1px 1px rgba(255, 255, 255, 1);
+    --shadow-elevated: 0 12px 40px rgba(31, 38, 135, 0.09), inset 0 1px 1px rgba(255, 255, 255, 1);
+    --shadow-floating: 0 16px 48px rgba(31, 38, 135, 0.12), inset 0 1px 1px rgba(255, 255, 255, 1);
+
+    /* Radiant Liquid Glows */
+    --glow-primary: 0 0 20px rgba(2, 132, 199, 0.25);
+    --glow-primary-strong: 0 0 30px rgba(2, 132, 199, 0.4);
+    --glow-success: 0 0 20px rgba(5, 150, 105, 0.25);
+    --glow-warning: 0 0 20px rgba(217, 119, 6, 0.25);
+    --glow-danger: 0 0 20px rgba(220, 38, 38, 0.25);
+}
+
+/* Background image filter in Light Mode — Crisp crystal saturation */
+[data-theme="light"] .page-background img {
+    filter: brightness(0.96) saturate(1.15) contrast(1.1);
+}
+
+/* Translucent Overlay allowing background image depth to shine through */
+[data-theme="light"] .page-background-overlay {
+    background: 
+        radial-gradient(ellipse 900px 700px at 10% 10%, rgba(56, 189, 248, 0.22) 0%, transparent 65%),
+        radial-gradient(ellipse 800px 600px at 90% 85%, rgba(167, 139, 250, 0.2) 0%, transparent 65%),
+        linear-gradient(180deg, 
+            rgba(241, 245, 249, 0.35) 0%, 
+            rgba(226, 232, 240, 0.25) 50%, 
+            rgba(241, 245, 249, 0.45) 100%
+        );
+}
+
+[data-theme="light"] .atmosphere-glow {
+    background:
+        radial-gradient(ellipse 800px 600px at 20% 20%, rgba(2, 132, 199, 0.18) 0%, transparent 70%),
+        radial-gradient(ellipse 600px 400px at 80% 80%, rgba(124, 58, 237, 0.15) 0%, transparent 70%);
+}
+
+/* Topbar — Translucent Crystal Liquid Glass */
+[data-theme="light"] .topbar {
+    background: rgba(255, 255, 255, 0.35) !important;
+    backdrop-filter: blur(24px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.85) !important;
+    box-shadow: 0 4px 24px rgba(15, 23, 42, 0.05) !important;
+}
+
+/* Sidebar — Real Spatial Liquid Glass Translucency */
+[data-theme="light"] .sidebar {
+    background: rgba(255, 255, 255, 0.32) !important;
+    backdrop-filter: blur(24px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.85) !important;
+    box-shadow: 0 16px 48px 0 rgba(31, 38, 135, 0.08), inset 0 1px 1px 0 rgba(255, 255, 255, 1) !important;
+}
+
+[data-theme="light"] .sidebar-link {
+    color: #1e293b !important;
+    font-weight: 500;
+}
+
+[data-theme="light"] .sidebar-link:hover:not(.active) {
+    background: rgba(2, 132, 199, 0.12) !important;
+    color: #0284c7 !important;
+    border-color: rgba(2, 132, 199, 0.3) !important;
+}
+
+[data-theme="light"] .sidebar-link.active {
+    background: linear-gradient(135deg, rgba(2, 132, 199, 0.22) 0%, rgba(124, 58, 237, 0.15) 100%) !important;
+    border: 1px solid rgba(2, 132, 199, 0.45) !important;
+    color: #0284c7 !important;
+    font-weight: 700 !important;
+    box-shadow: 0 4px 20px rgba(2, 132, 199, 0.25), inset 0 1px 1px #ffffff !important;
+}
+
+[data-theme="light"] .sidebar-section-title {
+    color: #334155 !important;
+    font-weight: 700 !important;
+}
+
+/* Glass Surfaces & Cards Translucency */
+[data-theme="light"] .glass-surface,
+[data-theme="light"] .glass-elevated,
+[data-theme="light"] .card-tf,
+[data-theme="light"] .metric-card {
+    background: rgba(255, 255, 255, 0.38) !important;
+    backdrop-filter: blur(20px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.8) !important;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.06), inset 0 1px 1px 0 rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Hover Liquid Glow Effects */
+[data-theme="light"] .glass-surface:hover,
+[data-theme="light"] .glass-elevated:hover,
+[data-theme="light"] .card-tf:hover,
+[data-theme="light"] .metric-card:hover {
+    border-color: rgba(2, 132, 199, 0.55) !important;
+    box-shadow: 0 14px 40px rgba(2, 132, 199, 0.2), inset 0 1px 1px #ffffff !important;
+    transform: translateY(-3px);
+}
+
+/* Inputs & Form Controls */
+[data-theme="light"] .form-input,
+[data-theme="light"] .form-select {
+    background: rgba(255, 255, 255, 0.55) !important;
+    border: 1px solid rgba(203, 213, 225, 0.9) !important;
+    color: #0f172a !important;
+    font-weight: 500;
+    backdrop-filter: blur(16px) !important;
+}
+
+[data-theme="light"] .form-input:focus,
+[data-theme="light"] .form-select:focus {
+    background: rgba(255, 255, 255, 0.9) !important;
+    border-color: #0284c7 !important;
+    box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.2), 0 0 20px rgba(2, 132, 199, 0.2) !important;
+}
+
+/* Buttons */
+[data-theme="light"] .btn-secondary {
+    background: rgba(255, 255, 255, 0.55) !important;
+    border: 1px solid rgba(255, 255, 255, 0.9) !important;
+    color: #0f172a !important;
+    backdrop-filter: blur(12px) !important;
+}
+
+[data-theme="light"] .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.9) !important;
+    border-color: #0284c7 !important;
+    color: #0284c7 !important;
+    box-shadow: 0 4px 16px rgba(2, 132, 199, 0.2) !important;
+}
+
+/* Table styling */
+[data-theme="light"] .table-tf thead th {
+    background: rgba(255, 255, 255, 0.55) !important;
+    color: #0f172a !important;
+    font-weight: 700 !important;
+}
+
+[data-theme="light"] .table-tf tbody td {
+    color: #0f172a !important;
+    font-weight: 500;
+    border-bottom-color: rgba(203, 213, 225, 0.6) !important;
+}
+
+[data-theme="light"] .table-tf tbody tr:hover td {
+    background: rgba(2, 132, 199, 0.08) !important;
+}
+
+/* Text & Headings */
+[data-theme="light"] .text-heading,
+[data-theme="light"] .page-header-title,
+[data-theme="light"] .card-title-tf {
+    color: #0f172a !important;
+    font-weight: 800 !important;
+}
+
+[data-theme="light"] .text-secondary {
+    color: #1e293b !important;
+    font-weight: 600 !important;
+}
+
+[data-theme="light"] .text-muted {
+    color: #334155 !important;
+    font-weight: 500 !important;
+}
+
+/* Metric Cards */
+[data-theme="light"] .metric-value {
+    color: #0f172a !important;
+    font-weight: 800 !important;
+}
+
+[data-theme="light"] .metric-label {
+    color: #1e293b !important;
+    font-weight: 600 !important;
+}
